@@ -133,7 +133,7 @@ namespace Kavenegar
             }
             var webRequest = (HttpWebRequest)WebRequest.Create(path);
             webRequest.Method = "POST";
-            webRequest.Timeout = -1;
+            webRequest.Timeout = 15000;
             webRequest.ContentType = "application/x-www-form-urlencoded";
             webRequest.ContentLength = byteArray.Length;
             using (Stream webpageStream = webRequest.GetRequestStream())
